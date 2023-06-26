@@ -1,0 +1,60 @@
+<head>
+    <link rel="icon" href="icons/icon.png">
+    <title>Transporter Addon</title>
+    <meta name="theme-color" content="#01161e">
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div id="banner">TRANSPORTER</div>
+    <hr class="line" width="60%" color="#394F49" />
+    <hr width="100%" color="#01161e" size="30px"/>
+
+
+    <main class="dropdown-menu" id="dropdown-menu">
+        <button id="mainDropdownButton" onclick="handleDropdownClicked(event)">
+            <p id="mainDropdownButtonText">
+                Labymod 4
+            </p>
+          <span id="dropdown-icon" class="material-symbols-outlined">
+            expand_more
+          </span>
+        </button>
+        <section class="dropdown__menu-labels">
+            <button class="selected" id="dropdownentry-laby4" onclick="handleDropdownEntryClicked(event)" style="visibility: hidden; height: 0">
+                Labymod 4
+            </button>
+            <button id="dropdownentry-laby3-189" onclick="handleDropdownEntryClicked(event)">
+                Labymod 3 - 1.8.9
+            </button>
+            <button id="dropdownentry-laby3-1122" onclick="handleDropdownEntryClicked(event)">
+                Labymod 3 - 1.12.2
+            </button>
+            <button id="dropdownentry-laby3-1165" onclick="handleDropdownEntryClicked(event)">
+                Labymod 3 - 1.16.5
+            </button>
+        </section>
+      </main>
+
+    <hr width="100%" color="#01161e" size="30px"/>
+
+    <h2>
+        <span>Klik her under for at download Transporter Addon til </span><span id="downloadText">Labymod 4</span>
+    </h2>
+
+    <hr width="100%" color="#01161e" size="10px"/>
+
+    <div class="container">
+            <a id="downloadButton" href="https://github.com/TFSMads/transporter/releases/latest/download/transporter-laby4.jar" class="button">
+                <ul>
+                    <li>&#68;ownload</li>
+                </ul>
+                <div>
+                    <span id="downloadarrow" class="material-symbols-outlined">
+                        arrow_downward_alt
+                    </span>
+                </div>
+            </a>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
