@@ -45,4 +45,43 @@ const handleDropdownEntryClicked = (event) => {
 };
 
 document.body.addEventListener("click", () => toggleDropdownMenu());
+
+function setActive(version) {
+    target = document.getElementById("dropdownentry-laby4")
+    if(version == "laby3_v1_8_9") {
+        target = document.getElementById("dropdownentry-laby3-189")
+    }
+    else if(version == "laby3_v1_12_2") {
+        target = document.getElementById("dropdownentry-laby3-1122")
+    }
+    else if(version == "laby3_v1_16_5") {
+        target = document.getElementById("dropdownentry-laby3-1165")
+    }
+    
+    elm = document.getElementsByClassName("selected")[0];
+    if(elm == null)
+        return
+    elm.classList.remove("selected")
+    elm.style.visibility = "visible";
+    elm.style.height = "56px";
+    target.classList.add("selected")
+    target.style.visibility = "hidden";
+    target.style.height = "0px";
+    document.getElementById("mainDropdownButtonText").innerHTML = event.target.innerHTML;
+    document.getElementById("downloadText").innerHTML = event.target.innerHTML;
+
+    if(target.id == "dropdownentry-laby3-189")
+      document.getElementById("downloadButton").href = "https://github.com/TFSMads/transporter/releases/latest/download/transporter-laby3_v1_8_9.jar"
+    else if(target.id == "dropdownentry-laby3-1122")
+      document.getElementById("downloadButton").href = "https://github.com/TFSMads/transporter/releases/latest/download/transporter-laby3_v1_12_2.jar"
+    else if(target.id == "dropdownentry-laby3-1165")
+      document.getElementById("downloadButton").href = "https://github.com/TFSMads/transporter/releases/latest/download/transporter-laby3_v1_16_5.jar"
+    else
+      document.getElementById("downloadButton").href = "https://github.com/TFSMads/transporter/releases/latest/download/transporter-laby4.jar"
+}
+
+url = new URL(window.location.href);
+version = url.searchParams.get("version");
+
+setActive(version)
   
