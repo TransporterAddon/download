@@ -69,8 +69,8 @@ function setActive(version) {
     target.classList.add("selected")
     target.style.visibility = "hidden";
     target.style.height = "0px";
-    document.getElementById("mainDropdownButtonText").innerHTML = event.target.innerHTML;
-    document.getElementById("downloadText").innerHTML = event.target.innerHTML;
+    document.getElementById("mainDropdownButtonText").innerHTML = target.innerHTML;
+    document.getElementById("downloadText").innerHTML = target.innerHTML;
 
     if(target.id == "dropdownentry-laby3-189")
       document.getElementById("downloadButton").href = "https://github.com/TFSMads/transporter/releases/latest/download/transporter-laby3_v1_8_9.jar"
