@@ -57,8 +57,6 @@ function setActive(version) {
     else if(version == "laby3_v1_16_5") {
         target = document.getElementById("dropdownentry-laby3-1165")
     }
-
-    console.log(target)
     
     elm = document.getElementsByClassName("selected")[0];
     if(elm == null)
@@ -84,8 +82,6 @@ function setActive(version) {
 
 url = new URL(window.location.href);
 version = url.searchParams.get("version");
-
-console.log(version)
 
 setActive(version)
   
